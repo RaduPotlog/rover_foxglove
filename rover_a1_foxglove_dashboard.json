@@ -1,0 +1,305 @@
+{
+  "configById": {
+    "3D!18i6zy7": {
+      "layers": {
+        "845139cb-26bc-40b3-8161-8ab60af4baf5": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "845139cb-26bc-40b3-8161-8ab60af4baf5",
+          "layerId": "foxglove.Grid",
+          "size": 10,
+          "divisions": 10,
+          "lineWidth": 1,
+          "color": "#000000ff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "order": 1,
+          "frameId": "odom"
+        }
+      },
+      "cameraState": {
+        "perspective": true,
+        "distance": 13.26840862577573,
+        "phi": 64.1714138948956,
+        "thetaOffset": 48.61390809756193,
+        "targetOffset": [
+          2.851149593726973,
+          2.568190806025446,
+          -5.371721544642116e-16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {
+        "frame:fl_wheel_base_link": {
+          "visible": false
+        },
+        "frame:fr_wheel_base_link": {
+          "visible": false
+        },
+        "frame:imu_link": {
+          "visible": true
+        },
+        "frame:rl_wheel_base_link": {
+          "visible": false
+        },
+        "frame:rr_wheel_base_link": {
+          "visible": false
+        },
+        "frame:base_footprint": {
+          "visible": true
+        },
+        "frame:body_link": {
+          "visible": false
+        },
+        "frame:base_link": {
+          "visible": true
+        }
+      },
+      "topics": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {},
+      "followTf": "odom"
+    },
+    "Indicator!1ja73dx": {
+      "path": "/hardware_interface/gpio_state.gpio_pin_sw_e_stop_user_button",
+      "style": "bulb",
+      "fontSize": 36,
+      "fallbackColor": "#ff0000",
+      "fallbackLabel": "PRESSED",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "false",
+          "color": "#33ff00",
+          "label": "READY"
+        }
+      ],
+      "foxglovePanelTitle": "SW-E-STOP Button"
+    },
+    "CallService!dze8fj": {
+      "requestPayload": "{}",
+      "layout": "vertical",
+      "timeoutSeconds": 10,
+      "serviceName": "/hardware_interface/sw_user_e_stop_reset",
+      "editingMode": false,
+      "buttonText": "SW_USER_E_STOP_ACTUATE",
+      "buttonColor": "#33f247",
+      "foxglovePanelTitle": "SW-E-STOP Button"
+    },
+    "CallService!4ayccr2": {
+      "requestPayload": "{}",
+      "layout": "vertical",
+      "timeoutSeconds": 10,
+      "serviceName": "/hardware_interface/sw_user_e_stop_set",
+      "editingMode": false,
+      "buttonText": "SW_USER_E_STOP_PRESS",
+      "buttonColor": "#ff0000",
+      "foxglovePanelTitle": "SW-E-STOP Button"
+    },
+    "Indicator!3nvxjn7": {
+      "path": "/hardware_interface/gpio_state.gpio_pin_sw_e_stop_latch_status",
+      "style": "bulb",
+      "fontSize": 36,
+      "fallbackColor": "#00ff1a",
+      "fallbackLabel": "TRUE",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "true",
+          "color": "#e34b4b",
+          "label": "FALSE"
+        }
+      ],
+      "foxglovePanelTitle": "SW-E-STOP-LATCH STATUS"
+    },
+    "CallService!r2rx5z": {
+      "requestPayload": "{}",
+      "layout": "vertical",
+      "timeoutSeconds": 10,
+      "editingMode": false,
+      "serviceName": "/hardware_interface/sw_e_stop_latch_reset",
+      "foxglovePanelTitle": "SW-E-STOP-LATCH RESET",
+      "buttonText": "SW-E-STOP-LATCH RESET",
+      "buttonColor": "#33f24d"
+    },
+    "Indicator!25x422y": {
+      "path": "/hardware_interface/gpio_state.gpio_pin_hw_e_stop_user_button",
+      "style": "bulb",
+      "fontSize": 30,
+      "fallbackColor": "#ff0000",
+      "fallbackLabel": "SET",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "false",
+          "color": "#33ff00",
+          "label": "READY"
+        }
+      ],
+      "foxglovePanelTitle": "HW-E-STOP Button"
+    },
+    "Indicator!6s1jl": {
+      "path": "/hardware_interface/gpio_state.gpio_pin_motor_contactor_engaged",
+      "style": "bulb",
+      "fontSize": 30,
+      "fallbackColor": "#ff0000",
+      "fallbackLabel": "NOT READY",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "true",
+          "color": "#00ff1a",
+          "label": "READY"
+        }
+      ],
+      "foxglovePanelTitle": "Motor Contactor Engaged Status"
+    },
+    "Indicator!2lcrs0u": {
+      "path": "/hardware_interface/gpio_state.gpio_pin_sw_e_stop_cpu_wdg_trigger",
+      "style": "bulb",
+      "fontSize": 30,
+      "fallbackColor": "#ff0000",
+      "fallbackLabel": "FALSE",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "true",
+          "color": "#68e24a",
+          "label": "TRUE"
+        }
+      ],
+      "foxglovePanelTitle": "Watchdog"
+    },
+    "Indicator!mid9o6": {
+      "path": "/hardware_interface/gpio_state.gpio_pin_sw_e_stop_motor_driver_fault",
+      "style": "bulb",
+      "fontSize": 36,
+      "fallbackColor": "#00ff32",
+      "fallbackLabel": "FALSE",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "true",
+          "color": "#e34b4b",
+          "label": "TRUE"
+        }
+      ],
+      "foxglovePanelTitle": "MOTOR DRIVER FAULT"
+    },
+    "virtual-joystick.Virtual Joystick!1g1w7co": {
+      "publishRate": 5,
+      "maxLinearSpeed": 1,
+      "maxAngularSpeed": 20,
+      "topic": "/teleop_foxglove_cmd_vel_stamped",
+      "messageSchema": "geometry_msgs/msg/TwistStamped"
+    },
+    "DiagnosticStatusPanel!41058qk": {
+      "topicToRender": "/diagnostics",
+      "selectedHardwareId": "ros2_control",
+      "selectedName": "controller_manager: Controller Manager Activity"
+    },
+    "RawMessages!os6rgs": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/rover_battery/battery_status",
+      "fontSize": 14
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "first": {
+      "first": "3D!18i6zy7",
+      "second": {
+        "first": {
+          "first": {
+            "first": {
+              "first": "Indicator!1ja73dx",
+              "second": "CallService!dze8fj",
+              "direction": "column",
+              "splitPercentage": 52.94117647058824
+            },
+            "second": "CallService!4ayccr2",
+            "direction": "column",
+            "splitPercentage": 66.54804270462633
+          },
+          "second": {
+            "first": {
+              "first": {
+                "first": {
+                  "first": "Indicator!3nvxjn7",
+                  "second": "CallService!r2rx5z",
+                  "direction": "column"
+                },
+                "second": "Indicator!25x422y",
+                "direction": "row"
+              },
+              "second": "Indicator!6s1jl",
+              "direction": "row",
+              "splitPercentage": 65.7933042212518
+            },
+            "second": {
+              "first": "Indicator!2lcrs0u",
+              "second": "Indicator!mid9o6",
+              "direction": "row"
+            },
+            "direction": "row",
+            "splitPercentage": 64.54124182431873
+          },
+          "direction": "row",
+          "splitPercentage": 23.775301616636828
+        },
+        "second": "virtual-joystick.Virtual Joystick!1g1w7co",
+        "direction": "column",
+        "splitPercentage": 48.073117863490026
+      },
+      "direction": "column",
+      "splitPercentage": 47.34651144522653
+    },
+    "second": {
+      "first": "DiagnosticStatusPanel!41058qk",
+      "second": "RawMessages!os6rgs",
+      "direction": "column",
+      "splitPercentage": 50.62434687701904
+    },
+    "direction": "row",
+    "splitPercentage": 72.67436329488388
+  }
+}
