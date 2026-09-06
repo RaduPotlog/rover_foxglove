@@ -1,96 +1,64 @@
 {
   "configById": {
-    "3D!18i6zy7": {
-      "layers": {
-        "845139cb-26bc-40b3-8161-8ab60af4baf5": {
-          "visible": true,
-          "frameLocked": true,
-          "label": "Grid",
-          "instanceId": "845139cb-26bc-40b3-8161-8ab60af4baf5",
-          "layerId": "foxglove.Grid",
-          "size": 10,
-          "divisions": 10,
-          "lineWidth": 1,
-          "color": "#000000ff",
-          "position": [
-            0,
-            0,
-            0
-          ],
-          "rotation": [
-            0,
-            0,
-            0
-          ],
-          "order": 1,
-          "frameId": "odom"
+    "RosOut!c5eeu": {
+      "minLogLevel": 1,
+      "preload": true,
+      "searchTerms": [],
+      "nameFilter": {},
+      "fontSize": 12,
+      "showLevel": true,
+      "showDate": true,
+      "showTime": true,
+      "showTimezone": true,
+      "showName": true,
+      "showSourceLocation": true
+    },
+    "Plot!2i966dm": {
+      "yAxisLabel": "",
+      "paths": [
+        {
+          "value": "/joint_states.velocity[1]",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#4e98e2",
+          "id": "5d277697-7a20-4d76-8f4e-e51a9d8d0b5f",
+          "dynamicLabelField": "",
+          "label": "FR"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joint_states.velocity[0]",
+          "enabled": true,
+          "color": "#f5774d",
+          "id": "ffafcee0-7f0f-49bb-8d00-8de98f989ae9",
+          "label": "FL"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joint_states.velocity[3]",
+          "enabled": true,
+          "color": "#f7df71",
+          "id": "aed83021-561c-4b69-b348-54b8a17876f9",
+          "label": "RR"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joint_states.velocity[2]",
+          "enabled": true,
+          "color": "#5cd6a9",
+          "id": "3d8c2555-1e70-4e7e-80d8-6b14d3cd93c4",
+          "label": "RL"
         }
-      },
-      "cameraState": {
-        "perspective": true,
-        "distance": 13.26840862577573,
-        "phi": 64.1714138948956,
-        "thetaOffset": 48.61390809756193,
-        "targetOffset": [
-          2.851149593726973,
-          2.568190806025446,
-          -5.371721544642116e-16
-        ],
-        "target": [
-          0,
-          0,
-          0
-        ],
-        "targetOrientation": [
-          0,
-          0,
-          0,
-          1
-        ],
-        "fovy": 45,
-        "near": 0.5,
-        "far": 5000
-      },
-      "followMode": "follow-pose",
-      "scene": {},
-      "transforms": {
-        "frame:fl_wheel_base_link": {
-          "visible": false
-        },
-        "frame:fr_wheel_base_link": {
-          "visible": false
-        },
-        "frame:imu_link": {
-          "visible": true
-        },
-        "frame:rl_wheel_base_link": {
-          "visible": false
-        },
-        "frame:rr_wheel_base_link": {
-          "visible": false
-        },
-        "frame:base_footprint": {
-          "visible": true
-        },
-        "frame:body_link": {
-          "visible": false
-        },
-        "frame:base_link": {
-          "visible": true
-        }
-      },
-      "topics": {},
-      "publish": {
-        "type": "point",
-        "poseTopic": "/move_base_simple/goal",
-        "pointTopic": "/clicked_point",
-        "poseEstimateTopic": "/initialpose",
-        "poseEstimateXDeviation": 0.5,
-        "poseEstimateYDeviation": 0.5,
-        "poseEstimateThetaDeviation": 0.26179939
-      },
-      "imageMode": {},
-      "followTf": "odom"
+      ],
+      "foxglovePanelTitle": "ddsasd",
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "showLegend": true
+    },
+    "RawMessages!ql9qq3": {
+      "defaultExpanded": false,
+      "topicPath": "/joint_states",
+      "diffEnabled": false
     },
     "Indicator!1ja73dx": {
       "path": "/hardware_interface/gpio_state.gpio_pin_sw_e_stop_user_button",
@@ -218,25 +186,65 @@
       ],
       "foxglovePanelTitle": "MOTOR DRIVER FAULT"
     },
+    "Gauge!2x8cm1e": {
+      "path": "/rover_battery/battery_status.temperature",
+      "style": "dial",
+      "minValue": 0,
+      "maxValue": 60,
+      "tickInterval": 10,
+      "showTicks": true,
+      "colorMap": "red-yellow-green",
+      "colorMode": "gradient",
+      "gradient": [
+        "#00ff05ff",
+        "#ff0000ff"
+      ],
+      "reverse": false,
+      "reverseDirection": false,
+      "foxglovePanelTitle": "Battery Temp"
+    },
+    "Gauge!410rqfx": {
+      "path": "/rover_battery/battery_status.current",
+      "style": "dial",
+      "minValue": -10,
+      "maxValue": 10,
+      "tickInterval": 1,
+      "showTicks": true,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": true,
+      "reverseDirection": true
+    },
+    "Gauge!2p2ph1m": {
+      "path": "/rover_battery/battery_status.percentage",
+      "style": "bar",
+      "minValue": 0,
+      "maxValue": 1,
+      "tickInterval": 0.2,
+      "showTicks": true,
+      "colorMap": "rainbow",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": true,
+      "reverseDirection": false
+    },
     "virtual-joystick.Virtual Joystick!1g1w7co": {
-      "publishRate": 5,
-      "maxLinearSpeed": 1,
-      "maxAngularSpeed": 20,
+      "publishRate": 10,
+      "maxLinearSpeed": 2,
+      "maxAngularSpeed": 2,
       "topic": "/teleop_foxglove_cmd_vel_stamped",
       "messageSchema": "geometry_msgs/msg/TwistStamped"
     },
     "DiagnosticStatusPanel!41058qk": {
       "topicToRender": "/diagnostics",
-      "selectedHardwareId": "ros2_control",
-      "selectedName": "controller_manager: Controller Manager Activity"
-    },
-    "RawMessages!os6rgs": {
-      "diffEnabled": false,
-      "diffMethod": "custom",
-      "diffTopicPath": "",
-      "showFullMessageForDiff": false,
-      "topicPath": "/rover_battery/battery_status",
-      "fontSize": 14
+      "selectedHardwareId": "ros2_control"
     }
   },
   "globalVariables": {},
@@ -246,8 +254,18 @@
   },
   "layout": {
     "first": {
-      "first": "3D!18i6zy7",
-      "second": {
+      "first": {
+        "first": "RosOut!c5eeu",
+        "second": "Plot!2i966dm",
+        "direction": "row",
+        "splitPercentage": 62.215018564043675
+      },
+      "second": "RawMessages!ql9qq3",
+      "direction": "row",
+      "splitPercentage": 78.477041527499
+    },
+    "second": {
+      "first": {
         "first": {
           "first": {
             "first": {
@@ -258,7 +276,7 @@
             },
             "second": "CallService!4ayccr2",
             "direction": "column",
-            "splitPercentage": 66.54804270462633
+            "splitPercentage": 65.84303320937981
           },
           "second": {
             "first": {
@@ -269,37 +287,49 @@
                   "direction": "column"
                 },
                 "second": "Indicator!25x422y",
-                "direction": "row"
+                "direction": "row",
+                "splitPercentage": 64.81555216561841
               },
               "second": "Indicator!6s1jl",
               "direction": "row",
-              "splitPercentage": 65.7933042212518
+              "splitPercentage": 74.55808849948767
             },
             "second": {
               "first": "Indicator!2lcrs0u",
               "second": "Indicator!mid9o6",
-              "direction": "row"
+              "direction": "row",
+              "splitPercentage": 49.24239531020259
             },
             "direction": "row",
-            "splitPercentage": 64.54124182431873
+            "splitPercentage": 67.71791161590806
           },
           "direction": "row",
           "splitPercentage": 23.775301616636828
         },
-        "second": "virtual-joystick.Virtual Joystick!1g1w7co",
+        "second": {
+          "first": {
+            "first": {
+              "first": "Gauge!2x8cm1e",
+              "second": "Gauge!410rqfx",
+              "direction": "row",
+              "splitPercentage": 46.9951923076923
+            },
+            "second": "Gauge!2p2ph1m",
+            "direction": "row",
+            "splitPercentage": 66.7535853976532
+          },
+          "second": "virtual-joystick.Virtual Joystick!1g1w7co",
+          "direction": "row",
+          "splitPercentage": 66.43101429166282
+        },
         "direction": "column",
-        "splitPercentage": 48.073117863490026
+        "splitPercentage": 52.57924654563975
       },
-      "direction": "column",
-      "splitPercentage": 47.34651144522653
+      "second": "DiagnosticStatusPanel!41058qk",
+      "direction": "row",
+      "splitPercentage": 77.57544224765869
     },
-    "second": {
-      "first": "DiagnosticStatusPanel!41058qk",
-      "second": "RawMessages!os6rgs",
-      "direction": "column",
-      "splitPercentage": 50.62434687701904
-    },
-    "direction": "row",
-    "splitPercentage": 72.67436329488388
+    "direction": "column",
+    "splitPercentage": 41.63733002001795
   }
 }
