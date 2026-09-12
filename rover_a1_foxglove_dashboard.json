@@ -155,20 +155,20 @@
       "foxglovePanelTitle": "Motor Contactor Engaged Status"
     },
     "Indicator!2lcrs0u": {
-      "path": "/hardware_interface/gpio_state.gpio_pin_sw_e_stop_cpu_wdg_trigger",
+      "path": "/hardware_interface/gpio_state.gpio_pin_cpu_wdg_heartbeat",
       "style": "bulb",
       "fontSize": 30,
-      "fallbackColor": "#ff0000",
-      "fallbackLabel": "FALSE",
+      "fallbackColor": "#3f7a2e",
+      "fallbackLabel": "LOW",
       "rules": [
         {
           "operator": "=",
           "rawValue": "true",
           "color": "#68e24a",
-          "label": "TRUE"
+          "label": "HIGH"
         }
       ],
-      "foxglovePanelTitle": "Watchdog"
+      "foxglovePanelTitle": "CPU WDG Heartbeat (toggles ~1 Hz)"
     },
     "Indicator!mid9o6": {
       "path": "/hardware_interface/gpio_state.gpio_pin_sw_e_stop_motor_driver_fault",
